@@ -2,7 +2,7 @@
     text-decoration: none;
     color: white;
     width: 320px;
-    height: 300px;
+    height: 350px;
     background-color: rgb(36, 37, 41);
     border-radius: 15px;
     cursor: pointer;
@@ -35,7 +35,7 @@
 }
 
 .game-item__buy {
-    position: relative;
+    position: absolute;
     right: 0;
     bottom: -12px;
 }
