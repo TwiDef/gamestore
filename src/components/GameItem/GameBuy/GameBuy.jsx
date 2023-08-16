@@ -1,10 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import './GameBuy.css';
 import Button from '../../Button/Button';
+import { setItemInCart } from '../../../redux/cart/reducer';
 
 const GameBuy = ({ game }) => {
-    const handleClick = () => {
+    const dispatch = useDispatch()
 
+    const handleClick = (e) => {
+        e.stopPropagation()
+        dispatch(setItemInCart(game))
     }
 
     return (
