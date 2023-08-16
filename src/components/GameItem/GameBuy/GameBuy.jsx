@@ -3,12 +3,16 @@ import './GameBuy.css';
 import Button from '../../Button/Button';
 
 const GameBuy = ({ game }) => {
+    const handleClick = () => {
+
+    }
+
     return (
         <div className='game-buy'>
             <span className='game-buy__price'>{game.price} руб.</span>
             <Button
                 type="primary"
-                onClick={() => null}
+                onClick={handleClick}
             >
                 В Корзину
             </Button>
