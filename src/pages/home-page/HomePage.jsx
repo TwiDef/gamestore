@@ -7,7 +7,6 @@ const HomePage = (props) => {
     return (
         <div className='home-page'>
             {GAMES.map(game => <GameItem game={game} key={game.id} />)}
-
         </div>
     );
 }
