@@ -7,6 +7,7 @@ import {
 import HomePage from "./pages/home-page/HomePage";
 import GamePage from "./pages/game-page/GamePage";
 import Header from "./components/Header/Header";
+import OrderPage from "./pages/order-page/OrderPage";
 import { Provider } from 'react-redux'
 import { store } from "./redux";
 
@@ -22,6 +23,9 @@ function App() {
                         </Route>
                         <Route exact path="/app/:title">
                             <GamePage />
+                        </Route>
+                        <Route exact path="/order">
+                            <OrderPage />
                         </Route>
                     </Switch>
                 </div>
