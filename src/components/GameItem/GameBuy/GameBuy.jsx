@@ -17,7 +17,6 @@ const GameBuy = ({ game }) => {
         } else {
             dispatch(setItemInCart(game))
         }
-
     }
 
     return (

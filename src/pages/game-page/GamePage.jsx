@@ -15,18 +15,20 @@ const GamePage = (props) => {
             <h1 className='game-page__title'>{game.title}</h1>
             <div className="game-page__content">
                 <div className="game-page__left">
-                    <iframe width="90%"
-                        height="400px"
+                    <iframe
+                        width="90%"
+                        height="418px"
                         src={game.video}
                         title="Youtube Video Player"
-                        frameborder="0"></iframe>
+                        frameBorder="0">
+                    </iframe>
                 </div>
                 <div className='game-page__right'>
                     <GameCover image={game.image} />
                     <p>{game.description}</p>
                     <p className="secondary-text">Популярные метки этого продукта:</p>
                     {game.genres.map(genre => <GameGenre genre={genre} key={genre} />)}
-                    <div className='game-page__buy_game'>
+                    <div className='game-page__buy-game'>
                         <GameBuy game={game} />
                     </div>
                 </div>
