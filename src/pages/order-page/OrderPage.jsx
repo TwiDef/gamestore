@@ -19,7 +19,7 @@ const OrderPage = (props) => {
             <div className="order-page__right">
                 <div className="order-page__total-price">
                     <span>
-                        {items.length} товаров на сумму {calcTotalPrice(items)} руб.
+                        <b>{items.length}</b> товаров на сумму <b>{calcTotalPrice(items)}</b> руб.
                     </span>
                 </div>
             </div>

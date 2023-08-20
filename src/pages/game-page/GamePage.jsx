@@ -20,7 +20,8 @@ const GamePage = (props) => {
                         height="418px"
                         src={game.video}
                         title="Youtube Video Player"
-                        frameBorder="0">
+                        frameBorder="0"
+                        allowFullScreen>
                     </iframe>
                 </div>
                 <div className='game-page__right'>
