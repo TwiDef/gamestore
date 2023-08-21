@@ -5,6 +5,7 @@ import GameCover from './GameCover/GameCover';
 import GameBuy from './GameBuy/GameBuy';
 import GameGenre from './GameGenre/GameGenre';
 import { setCurrentGame } from '../../redux/games/reducer';
+import GameLike from './GameLike/GameLike';
 import './GameItem.css';
 
 
@@ -26,6 +27,9 @@ const GameItem = ({ game }) => {
                     {
                         game.genres.map(genre => <GameGenre genre={genre} key={genre} />)
                     }
+                </div>
+                <div className='game-item__fav'>
+                    <GameLike game={game} />
                 </div>
                 <div className='game-item__buy'>
                     <GameBuy game={game} />
