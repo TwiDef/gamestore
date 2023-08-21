@@ -19,5 +19,8 @@
 }
 
 .header__cart-btn-wrapper {
+    display: flex;
     justify-content: flex-end;
+    align-items: flex-start;
+    gap: 20px;
 }

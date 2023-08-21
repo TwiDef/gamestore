@@ -1,0 +1,18 @@
+.favorite-block {
+    position: relative;
+}
+
+.items-in-favorite {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    font-size: 14px;
+    top: -6px;
+    left: 13px;
+}
