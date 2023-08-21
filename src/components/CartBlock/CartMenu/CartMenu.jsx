@@ -2,7 +2,7 @@ import React from 'react';
 import { calcTotalPrice } from '../../../utils';
 import Button from '../../Button/Button';
 import CartItem from './CartItem/CartItem';
-import { clearCart } from './../../../redux/cart/reducer';
+import { clearCart, setIsCartMenuVisible } from './../../../redux/cart/reducer';
 import './CartMenu.css';
 import { useDispatch } from 'react-redux';
 
@@ -11,6 +11,7 @@ const CartMenu = ({ items, onClick }) => {
 
     const handleClick = () => {
         dispatch(clearCart())
+        dispatch(setIsCartMenuVisible())
     }
 
     return (

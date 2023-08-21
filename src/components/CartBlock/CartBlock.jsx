@@ -1,20 +1,23 @@
-import React, { useCallback, useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './CartBlock.css';
 import { BsCart } from 'react-icons/bs';
 import CartMenu from './CartMenu/CartMenu';
 import { calcTotalPrice } from '../../utils';
 import ItemsInCart from './CartMenu/ItemsInCart/ItemsInCart';
 import { useHistory } from 'react-router-dom';
+import { setIsCartMenuVisible } from '../../redux/cart/reducer';
 
 const CartBlock = (props) => {
-    const [isCartMenuVisible, setIsCartMenuVisible] = useState(false)
+
+    const isCartMenuVisible = useSelector(state => state.cart.isCartMenuVisible)
     const items = useSelector(state => state.cart.itemsInCart)
+    const dispatch = useDispatch()
     const totalPrice = calcTotalPrice(items)
     const history = useHistory()
 
     const handleClick = useCallback(() => {
-        setIsCartMenuVisible(false)
+        dispatch(setIsCartMenuVisible())
         history.push('/order')
     }, [history])
 
@@ -24,7 +27,8 @@ const CartBlock = (props) => {
             <BsCart
                 size={25}
                 className='cart-block__icon'
-                onClick={() => setIsCartMenuVisible(!isCartMenuVisible)} />
+                onClick={() => dispatch(setIsCartMenuVisible())}
+            />
 
             {totalPrice > 0 ? <span className='cart-block__total-price'>{totalPrice} руб.</span> : null}
             {isCartMenuVisible && <CartMenu items={items} onClick={handleClick} />}
