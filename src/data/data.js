@@ -53,4 +53,31 @@ export const GAMES = [
         id: 6,
         description: 'Assassin’s Creed Valhalla — мультиплатформенная компьютерная игра в жанре action/RPG, разработанная студией Ubisoft Montreal под издательством компании Ubisoft. Является двенадцатой игрой в серии игр Assassin’s Creed.'
     },
+    {
+        image: 'https://cdn1.epicgames.com/salesEvent/salesEvent/amoguslandscape_2560x1440-3fac17e8bb45d81ec9b2c24655758075',
+        title: 'Among Us',
+        genres: ['Казуальная', 'Кооперативная'],
+        video: 'https://www.youtube.com/embed/9pyYq9lpjls',
+        price: 99,
+        id: 7,
+        description: 'Играйте с 4–15 игроками в онлайне или по локальной сети Wi-Fi и готовьте свой космический корабль к вылету. Однако будьте осторожны: один или несколько случайных игроков команды являются самозванцами, которые стремятся всех убить!'
+    },
+    {
+        image: 'https://cdn1.epicgames.com/spt-assets/2ae760629a384d5199cbefc612db7ac8/the-lord-of-the-rings-return-to-moria-rxsxh.jpg',
+        title: 'The Lord of the Rings: Return to Moria',
+        genres: ['Выживание', 'Кооператив'],
+        video: 'https://www.youtube.com/embed/P_7vtrlMN1A',
+        price: 2399,
+        id: 8,
+        description: 'Единственная игра с элементами выживания и ремесленничества в Четвёртой эпохе Middle-earth™ — культовом фантастическом мире, который создал Джон Р. Р. Толкин.'
+    },
+    {
+        image: 'https://cdn1.epicgames.com/offer/0a9e3c5ab6684506bd624a849ca0cf39/EGS_DeathStrandingDirectorsCut_KOJIMAPRODUCTIONS_S3_2560x1440-fe4e51f1801fba36e452aa3466625789',
+        title: 'DEATH STRANDING DIRECTOR\'S CUT',
+        genres: ['Открытый мир', 'Приключение', 'Экшен'],
+        video: 'https://www.youtube.com/embed/6tgsz7WbidU',
+        price: 5399,
+        id: 9,
+        description: 'Легендарный творец Хидэо Кодзима представляет окончательную версию DIRECTOR\'S CUT знаковой для жанра игры. Действуя от лица Сэма Бриджеса и объединяя последних выживших на территории Америки, вам предстоит возродить надежду человечества.'
+    },
 ]

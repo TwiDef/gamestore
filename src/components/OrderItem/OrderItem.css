@@ -18,3 +18,10 @@
     font-weight: bold;
     margin-left: auto;
 }
+
+.cart-item__delete-icon {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+

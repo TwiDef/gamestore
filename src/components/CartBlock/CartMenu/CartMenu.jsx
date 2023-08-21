@@ -2,9 +2,17 @@ import React from 'react';
 import { calcTotalPrice } from '../../../utils';
 import Button from '../../Button/Button';
 import CartItem from './CartItem/CartItem';
+import { clearCart } from './../../../redux/cart/reducer';
 import './CartMenu.css';
+import { useDispatch } from 'react-redux';
 
 const CartMenu = ({ items, onClick }) => {
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+        dispatch(clearCart())
+    }
+
     return (
         <div className='cart-menu'>
             <div className="cart-menu__games-list">
@@ -14,6 +22,7 @@ const CartMenu = ({ items, onClick }) => {
                             key={game.title}
                             price={game.price}
                             title={game.title}
+                            game={game}
                             id={game.id} />) : "Корзина пуста"
                 }
             </div>
@@ -24,9 +33,14 @@ const CartMenu = ({ items, onClick }) => {
                             <span>Итого:</span>
                             <span>{calcTotalPrice(items)} руб.</span>
                         </div>
-                        <Button type="primary" size="m" onClick={onClick} >
-                            Оформить заказ
-                        </Button>
+                        <div className="cart-menu__btns">
+                            <Button type="primary" size="m" onClick={onClick} >
+                                Оформить заказ
+                            </Button>
+                            <Button type="secondary" size="m" onClick={handleClick}>
+                                Очистить корзину
+                            </Button>
+                        </div>
                     </div>
                     : null
             }
