@@ -5,6 +5,7 @@ import CartBlock from '../CartBlock/CartBlock';
 import FavoriteBlock from '../FavoriteBlock/FavoriteBlock';
 
 const Header = (props) => {
+
     return (
         <div className='header'>
             <div className="wrapper">

@@ -1,0 +1,22 @@
+.fav-item {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.fav-item__title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.fav-item__cover {
+    width: 35%;
+    margin-bottom: 30px;
+}
+
+.fav-item__about {
+    width: 60%;
+}
+.fav-item__descr p {
+    margin-bottom: auto;
+}

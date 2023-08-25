@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { calcTotalPrice, enumerate } from '../../utils';
 import OrderItem from '../../components/OrderItem/OrderItem';
 
-const OrderPage = (props) => {
+const OrderPage = ({ props }) => {
     const items = useSelector(state => state.cart.itemsInCart)
 
     if (items.length < 1) {
